@@ -246,6 +246,11 @@ img {
   font-weight: var(--font-semi);
   border-radius: 0.5rem;
   transition: 0.3s;
+  
+  text-align: center;
+   /* New responsive styles */
+   width: auto; /* Change from fixed 25% */
+   min-width: 180px; /* Minimum width for better touch targets */
 }
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
@@ -382,6 +387,9 @@ img {
 .footer__copy {
   font-size: var(--smaller-font-size);
 }
+#goat{
+  display: none;
+}
 
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
@@ -392,10 +400,22 @@ img {
     width: 200px;
   }
 }
+@media only screen and (max-width: 456px) {
+  .bless a{
+    display: none;
+      }
+      #goat{
+        display: block;
+        margin-left: 4%;
+        width: 34px;
+      }
+}
+
 @media screen and (min-width: 576px) {
   .home {
     padding: 4rem 0 2rem;
   }
+
   .home__social {
     padding-top: 0;
     padding-bottom: 2.5rem;
@@ -500,4 +520,6 @@ img {
   .home__img {
     width: 450px;
   }
+  
+
 }
